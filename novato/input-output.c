@@ -3,11 +3,16 @@
 int main () {
   int idade;
   float altura;
-  char nome_completo[100];
+  char primeiro_nome[60];
   char opcao;
 
-  printf("Digite seu nome e o último sobrenome: ");
-  fgets(nome_completo, 100, stdin);  
+  /*
+  fgets resolve parcialmente o problema do scanf de somente considerar a
+  primeira palavra antes de dar espaço, porém ele só considera 29 caracteres
+  e pula linha automaticamente
+  */
+  printf("Digite seu primeiro nome: ");
+  scanf("%s", primeiro_nome);  
 
   printf("Digite sua idade: ");
   scanf("%d", &idade);
@@ -15,10 +20,19 @@ int main () {
   printf("Digite a sua altura: ");
   scanf("%f", &altura);
 
-  printf("Escolha a opção (A-E): ");
-  scanf(" %c", &opcao); //A inclusão do espaço antes do delimitador se faz necessária para dar a possibilidade de digitação ao usuário, visto que por padrão ele considera o enter dado no passo anterior como um caractere (\0)
+  /*
+  A inclusão do espaço antes do delimitador se faz necessária para dar 
+  a possibilidade de digitação ao usuário, visto que por padrão ele 
+  considera o enter dado no passo anterior como um caractere (\0)
+  */
 
-  printf("Olá %sTudo bem?\nVocê tem %d anos de idade e %.2fm de altura. A opção escolhida foi a %c.\nAté a próxima!\n", nome_completo, idade, altura, opcao);
+  printf("Escolha a opção (A-E): ");
+  scanf(" %c", &opcao); //
+
+  printf("\nOlá %s, tudo bem?\n", primeiro_nome);
+  printf("Você tem %d anos de idade e %.2fm de altura.\n", idade, altura);
+  printf("A opção escolhida foi a %c.\n", opcao);
+  printf("Até a próxima!\n");
 
   return 0;
 
