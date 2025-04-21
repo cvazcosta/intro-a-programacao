@@ -5,6 +5,7 @@ int main () {
   float altura;
   char primeiro_nome[60];
   char opcao;
+  long saldo;
 
   /*
   fgets resolve parcialmente o problema do scanf de somente considerar a
@@ -20,6 +21,9 @@ int main () {
   printf("Digite a sua altura: ");
   scanf("%f", &altura);
 
+  printf("Digite seu saldo: ");
+  scanf("%ld", &saldo);
+
   /*
   A inclusão do espaço antes do delimitador se faz necessária para dar 
   a possibilidade de digitação ao usuário, visto que por padrão ele 
@@ -31,6 +35,7 @@ int main () {
 
   printf("\nOlá %s, tudo bem?\n", primeiro_nome);
   printf("Você tem %d anos de idade e %.2fm de altura.\n", idade, altura);
+  printf("Seu saldo é de R$ %ld\n", saldo);
   printf("A opção escolhida foi a %c.\n", opcao);
   printf("Até a próxima!\n");
 
