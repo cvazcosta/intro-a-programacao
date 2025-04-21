@@ -22,7 +22,7 @@ int main () {
   scanf("%f", &altura);
 
   printf("Digite seu saldo: ");
-  scanf("%ld", &saldo);
+  scanf("%ld%*c", &saldo);
 
   /*
   A inclusão do espaço antes do delimitador se faz necessária para dar 
@@ -31,7 +31,7 @@ int main () {
   */
 
   printf("Escolha a opção (A-E): ");
-  scanf(" %c", &opcao); //
+  scanf("%c", &opcao); //
 
   printf("\nOlá %s, tudo bem?\n", primeiro_nome);
   printf("Você tem %d anos de idade e %.2fm de altura.\n", idade, altura);
