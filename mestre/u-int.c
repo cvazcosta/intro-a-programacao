@@ -8,4 +8,6 @@ int main () {
 
   printf("Variável int: %d\n", numero1);
   printf("Variável u-int: %u\n", numero2);
+
+  return 0;
 }
