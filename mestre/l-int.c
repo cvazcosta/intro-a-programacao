@@ -12,7 +12,9 @@ int main () {
   printf("Número int: %d\n", numero1);
   printf("Número l-int: %ld\n", numero2);
 
+  numero1++;
   numero2++;
 
+  printf("Número int após incremento: %d\n", numero1);
   printf("Número l-int após incremento: %ld\n", numero2);
 }
