@@ -17,4 +17,6 @@ int main () {
 
   printf("Número int após incremento: %d\n", numero1);
   printf("Número l-int após incremento: %ld\n", numero2);
+
+  return 0;
 }
